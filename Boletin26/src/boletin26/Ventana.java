@@ -124,7 +124,9 @@ public class Ventana extends javax.swing.JFrame {
 
     private void bAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAgregarActionPerformed
         DefaultTableModel model = (DefaultTableModel)tabla.getModel();
-        model.addRow(new Object[]{text1.getText(), text2.getText(), combo.getSelectedItem()});
+        if(text1.getText().length()>0 & text2.getText().length()>0){
+            model.addRow(new Object[]{text1.getText(), text2.getText(), combo.getSelectedItem()});
+        }
     }//GEN-LAST:event_bAgregarActionPerformed
 
     /**
